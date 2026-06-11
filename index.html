@@ -3,27 +3,48 @@
 
 <head>
     <!-- =========================
-        BASIC SEO
+        META & SEO OPTIMIZATION
     ========================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahfuj Monir | Portfolio</title>
-
     <meta name="description"
-        content="Mahfuj Monir - Diploma Engineer, PLC & Automation Enthusiast, Creative Developer Portfolio">
+        content="MD. Mahfuj Monir - Diploma Engineer | PLC & Automation Specialist | Full-Stack Developer | Portfolio showcasing engineering expertise and web development skills">
     <meta name="keywords"
-        content="Mahfuj Monir, PLC, Electrical Engineer, Web Developer, Portfolio, Automation, AutoCAD">
-    <meta name="author" content="Mahfuj Monir">
+        content="Mahfuj Monir, Electrical Engineer, PLC Programming, Industrial Automation, Web Developer, HTML CSS JavaScript, AutoCAD, Portfolio, Bangladesh">
+    <meta name="author" content="MD. Mahfuj Monir">
+    <meta name="theme-color" content="#050816">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MD. Mahfuj Monir | Portfolio">
+    <meta property="og:description"
+        content="Diploma Engineer with expertise in PLC Programming, Industrial Automation, and Modern Web Development">
+    <meta property="og:url" content="https://mdmahfujmonir.github.io/Portfolio-/">
+    <meta property="og:site_name" content="Mahfuj Monir Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MD. Mahfuj Monir | Portfolio">
+    <meta name="twitter:description"
+        content="Electrical Engineer | PLC Specialist | Web Developer">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mdmahfujmonir.github.io/Portfolio-/">
 
     <!-- =========================
         FAVICON
     ========================== -->
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="favicon.png">
 
     <!-- =========================
         FONT AWESOME
     ========================== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-EvBWYkla8X+2/wjE66onwUQstC+xNvfQ8VZQyK51N+aPIB1hadQyYV+/8PxfEir/iW37LMainSnvW+3Lq7sDA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- =========================
         AOS ANIMATION
@@ -31,22 +52,35 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- =========================
-        GOOGLE FONT
+        GOOGLE FONTS
     ========================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
     <!-- =========================
         EXTERNAL CSS
     ========================== -->
     <link rel="stylesheet" href="style.css">
+
+    <title>MD. Mahfuj Monir | Electrical Engineer & Web Developer</title>
 </head>
 
 <body>
+
+    <!-- =========================
+        LOADING ANIMATION
+    ========================== -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="spinner">
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+            <div class="spinner-ring"></div>
+        </div>
+        <p class="loading-text">Loading Portfolio...</p>
+    </div>
 
     <!-- =========================
         PARTICLES BACKGROUND
@@ -54,26 +88,36 @@
     <div id="particles-js"></div>
 
     <!-- =========================
-        HEADER
+        THEME TOGGLE
     ========================== -->
-    <header class="header">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- =========================
+        HEADER & NAVIGATION
+    ========================== -->
+    <header class="header" role="banner">
 
         <div class="logo">
-            <a href="#">Mahfuj<span>Monir</span></a>
+            <a href="#home" aria-label="Mahfuj Monir Portfolio Home">
+                Md. Mahfuj<span>Monir</span>
+            </a>
         </div>
 
-        <nav class="navbar">
-
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
             <a href="#home">Home</a>
+            <a href="#career-objective">Objective</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#certifications">Certifications</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
-
         </nav>
 
-        <div class="menu-btn">
+        <div class="menu-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
             <i class="fa-solid fa-bars"></i>
         </div>
 
@@ -82,64 +126,89 @@
     <!-- =========================
         HERO SECTION
     ========================== -->
-    <section class="home" id="home">
+    <section class="home" id="home" role="main">
 
         <div class="home-content" data-aos="fade-right">
 
-            <h3>Hello, I'm</h3>
+            <h1>MD. Mahfuj Monir</h1>
 
-            <h1>Mahfuj Monir</h1>
-
-            <h2>
+            <h2 class="hero-subtitle">
                 <span class="typing"></span>
             </h2>
 
-            <p>
-                Passionate Electrical Engineering graduate with strong interests in Industrial Automation,
-                PLC systems, modern Web Development, and creative technology solutions.
-                I love combining engineering logic with software creativity to build impactful digital experiences.
+            <p class="hero-description">
+                Passionate Electrical Engineering graduate with expertise in Industrial Automation, PLC systems,
+                and modern Web Development. Combining engineering precision with creative problem-solving to build
+                impactful digital and automation solutions.
             </p>
 
             <div class="hero-buttons">
-
-                <a href="cv.pdf" class="btn" download>
+                <a href="cv.pdf" class="btn btn-primary" download aria-label="Download CV">
                     <i class="fa-solid fa-download"></i> Download CV
                 </a>
-
-                <a href="#contact" class="btn btn-outline">
-                    <i class="fa-solid fa-paper-plane"></i> Hire Me
+                <a href="#contact" class="btn btn-outline" aria-label="Contact me">
+                    <i class="fa-solid fa-paper-plane"></i> Get In Touch
                 </a>
-
             </div>
 
-            <div class="social-icons">
-
-                <a href="#">
+            <div class="social-icons" role="contentinfo" aria-label="Social Media Links">
+                <a href="https://github.com/mdmahfujmonir" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub Profile">
                     <i class="fa-brands fa-github"></i>
                 </a>
-
-                <a href="#">
+                <a href="https://www.linkedin.com/in/mdmahfujmonir/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-
-                <a href="#">
+                <a href="https://www.facebook.com/share/1NxXvXbH5y/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook Profile">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-
-                <a href="#">
+                <a href="mailto:mdmahfujmonir@gmail.com" aria-label="Send Email">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
-
             </div>
 
         </div>
 
         <div class="home-image" data-aos="fade-left">
-
             <div class="image-box">
-                <img src="profile.png" alt="Mahfuj Monir">
+                <img src="profile.png" alt="MD. Mahfuj Monir - Electrical Engineer and Web Developer">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- =========================
+        CAREER OBJECTIVE SECTION
+    ========================== -->
+    <section class="career-objective section" id="career-objective">
+
+        <div class="section-title" data-aos="fade-up">
+            <h2>Career Objective</h2>
+            <span>Professional Goals</span>
+        </div>
+
+        <div class="objective-container" data-aos="zoom-in">
+            <div class="objective-card">
+                <i class="fa-solid fa-target"></i>
+                <h3>Short Term</h3>
+                <p>
+                    Secure a challenging position as an Electrical Engineer or Web Developer where I can apply
+                    my technical expertise in PLC programming, industrial automation, and modern web technologies
+                    to contribute to organizational growth and innovation.
+                </p>
             </div>
 
+            <div class="objective-card">
+                <i class="fa-solid fa-rocket"></i>
+                <h3>Long Term</h3>
+                <p>
+                    Establish myself as a versatile tech professional by deepening expertise in IoT, Cloud Computing,
+                    and Full-Stack Development. Aspire to lead automation projects and mentor junior engineers while
+                    continuously learning emerging technologies.
+                </p>
+            </div>
         </div>
 
     </section>
@@ -157,33 +226,44 @@
         <div class="about-container">
 
             <div class="about-image" data-aos="zoom-in">
-                <img src="about.png" alt="About Mahfuj">
+                <img src="profile.png" alt="Mahfuj Monir Professional Photo">
             </div>
 
             <div class="about-content" data-aos="fade-left">
 
-                <h3>
-                    Engineering Mindset + Creative Coding
-                </h3>
+                <h3>Engineering Mindset + Creative Coding</h3>
 
                 <p>
-                    I am Mahfuj Monir, a Diploma in Electrical Engineering graduate from
-                    Mymensingh Polytechnic Institute with a CGPA of 3.42 out of 4.00.
+                    I am MD. Mahfuj Monir, a Diploma in Electrical Engineering graduate from
+                    Mymensingh Polytechnic Institute with a CGPA of 3.42 out of 4.00. With a strong foundation in
+                    electrical systems and automation, I am passionate about leveraging technology to solve real-world problems.
                 </p>
 
                 <p>
-                    My technical background includes PLC programming, industrial automation,
-                    motor control systems, AutoCAD drafting, and electrical troubleshooting.
+                    My technical background includes PLC programming (Siemens, Allen Bradley), industrial automation,
+                    motor control systems, AutoCAD drafting, electrical troubleshooting, and VFD programming.
                 </p>
 
                 <p>
-                    Alongside engineering, I am deeply passionate about modern software development,
-                    responsive web design, UI/UX creativity, and digital problem-solving.
+                    Alongside my engineering expertise, I am deeply passionate about modern web development,
+                    responsive design, UI/UX principles, and full-stack development. I excel at bridging the gap
+                    between hardware and software solutions.
                 </p>
 
-                <p>
-                    I enjoy creating systems that are not only technically efficient but also visually impressive.
-                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h4>3+</h4>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>5+</h4>
+                        <p>Technical Skills</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>3.42</h4>
+                        <p>CGPA Score</p>
+                    </div>
+                </div>
 
                 <div class="about-info">
 
@@ -199,7 +279,7 @@
                         <i class="fa-solid fa-code"></i>
                         <div>
                             <h4>Development</h4>
-                            <p>Frontend & Creative UI Design</p>
+                            <p>Frontend & Full-Stack Developer</p>
                         </div>
                     </div>
 
@@ -225,88 +305,84 @@
     <section class="skills section" id="skills">
 
         <div class="section-title" data-aos="fade-up">
-            <h2>Skills</h2>
-            <span>Technical Expertise</span>
+            <h2>Skills & Expertise</h2>
+            <span>Technical Proficiency</span>
         </div>
 
-        <div class="skills-container">
+        <div class="skills-wrapper">
 
-            <div class="skill-box" data-aos="fade-right">
+            <div class="skills-category" data-aos="fade-up">
+                <h3>Web Development</h3>
+                <div class="skills-container">
 
-                <div class="skill-info">
-                    <h4>HTML / CSS</h4>
-                    <span>90%</span>
+                    <div class="skill-box" data-aos="fade-right">
+                        <div class="skill-info">
+                            <h4>HTML / CSS</h4>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress html"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box" data-aos="fade-left">
+                        <div class="skill-info">
+                            <h4>JavaScript</h4>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress js"></div>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="progress-bar">
-                    <div class="progress html"></div>
-                </div>
-
             </div>
 
-            <div class="skill-box" data-aos="fade-left">
+            <div class="skills-category" data-aos="fade-up">
+                <h3>Engineering & Automation</h3>
+                <div class="skills-container">
 
-                <div class="skill-info">
-                    <h4>JavaScript</h4>
-                    <span>75%</span>
+                    <div class="skill-box" data-aos="fade-right">
+                        <div class="skill-info">
+                            <h4>PLC Programming</h4>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress plc"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box" data-aos="fade-left">
+                        <div class="skill-info">
+                            <h4>Industrial Automation</h4>
+                            <span>82%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress auto"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box" data-aos="fade-right">
+                        <div class="skill-info">
+                            <h4>AutoCAD 2D</h4>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress cad"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-box" data-aos="fade-left">
+                        <div class="skill-info">
+                            <h4>Problem Solving</h4>
+                            <span>88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress solve"></div>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div class="progress-bar">
-                    <div class="progress js"></div>
-                </div>
-
-            </div>
-
-            <div class="skill-box" data-aos="fade-right">
-
-                <div class="skill-info">
-                    <h4>PLC Programming</h4>
-                    <span>85%</span>
-                </div>
-
-                <div class="progress-bar">
-                    <div class="progress plc"></div>
-                </div>
-
-            </div>
-
-            <div class="skill-box" data-aos="fade-left">
-
-                <div class="skill-info">
-                    <h4>AutoCAD 2D</h4>
-                    <span>80%</span>
-                </div>
-
-                <div class="progress-bar">
-                    <div class="progress cad"></div>
-                </div>
-
-            </div>
-
-            <div class="skill-box" data-aos="fade-right">
-
-                <div class="skill-info">
-                    <h4>Industrial Automation</h4>
-                    <span>82%</span>
-                </div>
-
-                <div class="progress-bar">
-                    <div class="progress auto"></div>
-                </div>
-
-            </div>
-
-            <div class="skill-box" data-aos="fade-left">
-
-                <div class="skill-info">
-                    <h4>Problem Solving</h4>
-                    <span>88%</span>
-                </div>
-
-                <div class="progress-bar">
-                    <div class="progress solve"></div>
-                </div>
-
             </div>
 
         </div>
@@ -314,84 +390,244 @@
     </section>
 
     <!-- =========================
-        PROJECTS SECTION
+        GITHUB PROJECTS SECTION
     ========================== -->
-    <section class="projects section" id="projects">
+    <section class="github-projects section" id="projects">
 
         <div class="section-title" data-aos="fade-up">
-            <h2>Projects</h2>
-            <span>Featured Works</span>
+            <h2>Featured Projects</h2>
+            <span>Portfolio Showcase</span>
         </div>
 
         <div class="projects-container">
 
             <!-- PROJECT 1 -->
-            <div class="project-card" data-aos="zoom-in">
-
-                <div class="project-icon">
-                    <i class="fa-solid fa-microchip"></i>
+            <div class="project-card github-card" data-aos="zoom-in">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <a href="https://github.com/mdmahfujmonir" target="_blank" rel="noopener noreferrer"
+                        class="github-link" aria-label="View on GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
                 </div>
 
                 <h3>PLC Motor Control System</h3>
 
                 <p>
-                    Designed and implemented a PLC-based Star-Delta and
-                    Reverse Forward motor control system with
-                    3-phase failure protection.
+                    Designed and implemented a comprehensive PLC-based Star-Delta and Reverse-Forward motor control
+                    system with advanced 3-phase failure protection and real-time monitoring capabilities.
                 </p>
 
+                <div class="project-stats">
+                    <span><i class="fa-solid fa-star"></i> Featured</span>
+                    <span><i class="fa-solid fa-code"></i> PLC/Automation</span>
+                </div>
+
                 <div class="project-tags">
-                    <span>PLC</span>
-                    <span>Automation</span>
-                    <span>Motor Control</span>
+                    <span class="tag tag-plc">PLC Programming</span>
+                    <span class="tag tag-automation">Automation</span>
+                    <span class="tag tag-control">Motor Control</span>
                 </div>
 
             </div>
 
             <!-- PROJECT 2 -->
-            <div class="project-card" data-aos="zoom-in">
-
-                <div class="project-icon">
-                    <i class="fa-solid fa-house"></i>
+            <div class="project-card github-card" data-aos="zoom-in">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <a href="https://github.com/mdmahfujmonir" target="_blank" rel="noopener noreferrer"
+                        class="github-link" aria-label="View on GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
                 </div>
 
-                <h3>House Wiring Setup</h3>
+                <h3>Industrial Electrical Wiring Setup</h3>
 
                 <p>
-                    Practical electrical installation project including
-                    protection systems, load distribution,
-                    switches, and breakers integration.
+                    Practical electrical installation project including comprehensive protection systems,
+                    load distribution planning, switches integration, and breaker coordination for industrial safety.
                 </p>
 
+                <div class="project-stats">
+                    <span><i class="fa-solid fa-building"></i> Industrial</span>
+                    <span><i class="fa-solid fa-shield"></i> Safety-Critical</span>
+                </div>
+
                 <div class="project-tags">
-                    <span>Electrical</span>
-                    <span>Wiring</span>
-                    <span>Safety</span>
+                    <span class="tag tag-electrical">Electrical Design</span>
+                    <span class="tag tag-wiring">Wiring</span>
+                    <span class="tag tag-safety">Safety Systems</span>
                 </div>
 
             </div>
 
             <!-- PROJECT 3 -->
-            <div class="project-card" data-aos="zoom-in">
-
-                <div class="project-icon">
-                    <i class="fa-solid fa-code"></i>
+            <div class="project-card github-card" data-aos="zoom-in">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <a href="https://github.com/mdmahfujmonir/Portfolio-" target="_blank" rel="noopener noreferrer"
+                        class="github-link" aria-label="View on GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
                 </div>
 
-                <h3>Modern Portfolio Website</h3>
+                <h3>Modern Responsive Portfolio</h3>
 
                 <p>
-                    Responsive personal portfolio website using
-                    HTML, CSS, JavaScript, animations,
-                    and interactive UI components.
+                    Professional personal portfolio website built with vanilla HTML5, CSS3, and JavaScript.
+                    Features modern animations, glassmorphism design, and full responsive layout for all devices.
                 </p>
 
-                <div class="project-tags">
-                    <span>Frontend</span>
-                    <span>Responsive</span>
-                    <span>UI/UX</span>
+                <div class="project-stats">
+                    <span><i class="fa-solid fa-mobile"></i> Responsive</span>
+                    <span><i class="fa-solid fa-palette"></i> UI/UX Design</span>
                 </div>
 
+                <div class="project-tags">
+                    <span class="tag tag-frontend">Frontend</span>
+                    <span class="tag tag-responsive">Responsive</span>
+                    <span class="tag tag-ux">UI/UX</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="view-more-projects" data-aos="fade-up">
+            <a href="https://github.com/mdmahfujmonir" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                View All Projects on GitHub
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- =========================
+        ACHIEVEMENTS SECTION
+    ========================== -->
+    <section class="achievements section" id="achievements">
+
+        <div class="section-title" data-aos="fade-up">
+            <h2>Achievements & Highlights</h2>
+            <span>Key Milestones</span>
+        </div>
+
+        <div class="achievements-container">
+
+            <div class="achievement-item" data-aos="fade-up">
+                <div class="achievement-icon">
+                    <i class="fa-solid fa-medal"></i>
+                </div>
+                <h3>Academic Excellence</h3>
+                <p>Maintained CGPA of 3.42/4.00 in Electrical Engineering Diploma, demonstrating consistent
+                    academic performance and dedication.</p>
+            </div>
+
+            <div class="achievement-item" data-aos="fade-up">
+                <div class="achievement-icon">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <h3>Perfect SSC Performance</h3>
+                <p>Achieved outstanding GPA of 4.89/5.00 in SSC examination, showcasing strong foundational knowledge
+                    and examination excellence.</p>
+            </div>
+
+            <div class="achievement-item" data-aos="fade-up">
+                <div class="achievement-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3>Automation Projects</h3>
+                <p>Successfully designed and implemented multiple PLC automation projects with industry-standard
+                    protocols and safety mechanisms.</p>
+            </div>
+
+            <div class="achievement-item" data-aos="fade-up">
+                <div class="achievement-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Full-Stack Development</h3>
+                <p>Developed responsive web applications using modern web technologies with focus on UX/UI design
+                    and accessibility standards.</p>
+            </div>
+
+            <div class="achievement-item" data-aos="fade-up">
+                <div class="achievement-icon">
+                    <i class="fa-solid fa-tools"></i>
+                </div>
+                <h3>Technical Proficiency</h3>
+                <p>Master-level expertise in multiple technical domains including CAD design, PLC programming,
+                    and web development.</p>
+            </div>
+
+            <div class="achievement-item" data-aos="fade-up">
+                <div class="achievement-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <h3>Innovation Mindset</h3>
+                <p>Passionate about combining engineering principles with creative problem-solving to develop
+                    innovative solutions.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+        CERTIFICATIONS SECTION
+    ========================== -->
+    <section class="certifications section" id="certifications">
+
+        <div class="section-title" data-aos="fade-up">
+            <h2>Certifications & Credentials</h2>
+            <span>Professional Development</span>
+        </div>
+
+        <div class="certifications-container">
+
+            <div class="certification-card" data-aos="zoom-in">
+                <div class="cert-icon">
+                    <i class="fa-solid fa-certificate"></i>
+                </div>
+                <h3>Diploma in Electrical Engineering</h3>
+                <p class="cert-issuer">Mymensingh Polytechnic Institute</p>
+                <p class="cert-details">CGPA: 3.42/4.00 | Year: 2026</p>
+                <span class="cert-badge">Verified</span>
+            </div>
+
+            <div class="certification-card" data-aos="zoom-in">
+                <div class="cert-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3>SSC (Vocational - General Mechanics)</h3>
+                <p class="cert-issuer">Purbadhala J.M Govt. Pilot High School</p>
+                <p class="cert-details">GPA: 4.89/5.00 | Year: 2021</p>
+                <span class="cert-badge">Verified</span>
+            </div>
+
+            <div class="certification-card" data-aos="zoom-in">
+                <div class="cert-icon">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h3>PLC & Industrial Automation</h3>
+                <p class="cert-issuer">Practical Training & Self-Study</p>
+                <p class="cert-details">Advanced Level | In Progress</p>
+                <span class="cert-badge">In Progress</span>
+            </div>
+
+            <div class="certification-card" data-aos="zoom-in">
+                <div class="cert-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Web Development & JavaScript</h3>
+                <p class="cert-issuer">Self-Taught & Online Learning</p>
+                <p class="cert-details">Intermediate Level | Ongoing</p>
+                <span class="cert-badge">In Progress</span>
             </div>
 
         </div>
@@ -404,13 +640,13 @@
     <section class="education section" id="education">
 
         <div class="section-title" data-aos="fade-up">
-            <h2>Education</h2>
+            <h2>Educational Background</h2>
             <span>Academic Journey</span>
         </div>
 
         <div class="timeline">
 
-            <!-- ITEM 1 -->
+            <!-- EDUCATION ITEM 1 -->
             <div class="timeline-item" data-aos="fade-right">
 
                 <div class="timeline-dot"></div>
@@ -421,19 +657,24 @@
 
                     <h4>Mymensingh Polytechnic Institute</h4>
 
-                    <p>
-                        Passing Year: 2026
+                    <p class="timeline-date">
+                        <i class="fa-solid fa-calendar"></i> Expected Graduation: 2026
                     </p>
 
-                    <p>
-                        CGPA: 3.42 out of 4.00
+                    <p class="timeline-description">
+                        Comprehensive engineering education covering power systems, automation, control systems,
+                        and industrial electrical design.
+                    </p>
+
+                    <p class="timeline-achievement">
+                        <strong>CGPA:</strong> 3.42 out of 4.00
                     </p>
 
                 </div>
 
             </div>
 
-            <!-- ITEM 2 -->
+            <!-- EDUCATION ITEM 2 -->
             <div class="timeline-item" data-aos="fade-left">
 
                 <div class="timeline-dot"></div>
@@ -444,12 +685,16 @@
 
                     <h4>Purbadhala J.M Govt. Pilot High School</h4>
 
-                    <p>
-                        Passing Year: 2021
+                    <p class="timeline-date">
+                        <i class="fa-solid fa-calendar"></i> Graduation Year: 2021
                     </p>
 
-                    <p>
-                        GPA: 4.89 out of 5.00
+                    <p class="timeline-description">
+                        Foundation in basic engineering principles, mechanical systems, and technical drawing.
+                    </p>
+
+                    <p class="timeline-achievement">
+                        <strong>GPA:</strong> 4.89 out of 5.00
                     </p>
 
                 </div>
@@ -466,7 +711,7 @@
     <section class="contact section" id="contact">
 
         <div class="section-title" data-aos="fade-up">
-            <h2>Contact</h2>
+            <h2>Get In Touch</h2>
             <span>Let's Work Together</span>
         </div>
 
@@ -475,51 +720,74 @@
             <div class="contact-info" data-aos="fade-right">
 
                 <div class="contact-box">
-
                     <i class="fa-solid fa-envelope"></i>
-
                     <div>
                         <h4>Email</h4>
-                        <p>mdmahfujmonir@gmail.com</p>
+                        <a href="mailto:mdmahfujmonir@gmail.com">mdmahfujmonir@gmail.com</a>
                     </div>
-
                 </div>
 
                 <div class="contact-box">
-
                     <i class="fa-solid fa-phone"></i>
-
                     <div>
                         <h4>Phone</h4>
-                        <p>+8801876-106615</p>
+                        <a href="tel:+8801876106615">+88 01876-106615</a>
                     </div>
-
                 </div>
 
                 <div class="contact-box">
-
                     <i class="fa-solid fa-location-dot"></i>
-
                     <div>
                         <h4>Location</h4>
                         <p>Mymensingh, Bangladesh</p>
                     </div>
+                </div>
 
+                <div class="contact-box">
+                    <i class="fa-solid fa-globe"></i>
+                    <div>
+                        <h4>Website</h4>
+                        <a href="https://mdmahfujmonir.github.io/Portfolio-/" target="_blank"
+                            rel="noopener noreferrer">Portfolio Site</a>
+                    </div>
                 </div>
 
             </div>
 
-            <form class="contact-form" data-aos="fade-left">
+            <form class="contact-form" id="contact-form" data-aos="fade-left" novalidate>
 
-                <input type="text" placeholder="Your Name" required>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Full Name" required
+                        aria-label="Full Name">
+                    <span class="error-message"></span>
+                </div>
 
-                <input type="email" placeholder="Your Email" required>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required
+                        aria-label="Email Address">
+                    <span class="error-message"></span>
+                </div>
 
-                <textarea rows="6" placeholder="Your Message"></textarea>
+                <div class="form-group">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required
+                        aria-label="Subject">
+                    <span class="error-message"></span>
+                </div>
 
-                <button type="submit" class="btn">
-                    Send Message
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="6" placeholder="Your Message" required
+                        aria-label="Message"></textarea>
+                    <span class="error-message"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary" aria-label="Send Message">
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-loader" style="display: none;">
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+                    </span>
                 </button>
+
+                <div id="form-message" class="form-message" role="alert"></div>
 
             </form>
 
@@ -530,32 +798,55 @@
     <!-- =========================
         FOOTER
     ========================== -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
 
-        <p>
-            © 2026 Mahfuj Monir | All Rights Reserved
-        </p>
+        <div class="footer-content">
+
+            <p class="copyright">
+                &copy; <span id="year"></span> MD. Mahfuj Monir. All Rights Reserved.
+            </p>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <span class="separator">•</span>
+                <a href="cv.pdf" download>Download CV</a>
+                <span class="separator">•</span>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <p class="footer-credit">
+                Designed with <i class="fa-solid fa-heart"></i> by Mahfuj Monir
+            </p>
+
+        </div>
 
     </footer>
 
     <!-- =========================
-        PARTICLES JS
+        EXTERNAL SCRIPTS
     ========================== -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-    <!-- =========================
-        TYPED JS
-    ========================== -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+        integrity="sha512-ZapIW3+d3zqhSjRriFvA0K0GPLcnzQnmRlkoPBP/ABu9vNYmakp9IY5lT9+MaE7qN8O7YnYuqUQvSccuX3dxoA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- =========================
-        AOS JS
-    ========================== -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"
+        integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXrupLDteDIIR4MqMd+QPMw56M7wAaP6Dc2q2nwQrQr4pGQ1ykyl4oWcIqrqKA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- =========================
-        EXTERNAL JS
-    ========================== -->
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+        integrity="sha512-A7AYk1fXKgMv9aaB6Uv6LsEkQOjsmroEUC8UWIYeDlAfu4JwqWQ9yP6D3P2nwNUV31DbqGFziSL2KiNlro7S2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"
+        integrity="sha512-4zJ1XreuJeL1JiIfS2A9kSQkP+hcp5zxPA+gcUAcvjs0E8/pvrWCrMFqE2yVRNMU69pIoZR5pw9XnjxD7cu+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 
 </body>
